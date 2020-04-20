@@ -1,0 +1,9 @@
+{% block content %}
+  <h2>Cooperativas Gestara</h2>
+  {% for cooperative in object_list %}
+    <p><a href="{% url 'details' pk=cooperative.pk %}"> {{ cooperative.name }}</a></p>
+    <p> {{ cooperative.short_description }}</p>
+    <a href="{% url 'details' pk=cooperative.pk %}"><img width="150" height="150" src="/media/{{ cooperative.logo }}"></a>
+    <hr>
+  {% endfor %}
+{% endblock %}

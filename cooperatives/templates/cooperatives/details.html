@@ -1,0 +1,47 @@
+{% block content %}
+<h2>{{ object.name }}</h2>
+  <img width="200" height="200" src="/media/{{ cooperative.logo }}">
+  <p>{{ object.description }}</p>
+  {# email condition  #}
+  {% if object.email %}
+    <p>Email: {{ object.email }}</p>
+  {% endif %}
+
+  {# phone conditiion #}
+  {% if object.phone %}
+    <p>Teléfono: {{ object.phone }}</p>
+  {% endif %}
+
+  {# web condition  #}
+  {% if object.web %}
+    <p>Sitio web: {{ object.web }}</p>
+  {% endif %}
+  
+  {# facebook condition  #}
+  {% if object.facebook %}
+    <p>Facebook: {{ object.facebook }}</p>
+  {% endif %}
+
+  {# instagram condition  #}
+  {% if object.instagram %}
+    <p>Instagram: {{ object.instagram }}</p>
+  {% endif %}
+
+  {# skype condition  #}
+  {% if object.skype %}
+    <p>Skype: {{ object.skype }}</p>
+  {% endif %}
+
+  {# address condition  #}
+  {% if object.address %}
+    <p>Dirección: {{ object.address }}</p>
+  {% endif %}
+
+  {# whatsapp condition  #}
+  {% if object.whatsapp and object.phone != object.whatsapp %}
+    <p>Whatsapp: {{ object.whatsapp }}</p>
+  {% endif %}
+
+
+
+{% endblock %}
